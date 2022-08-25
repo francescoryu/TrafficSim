@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class Animation extends JComponent {
     private int lastX = 0;
-    int min = 1;
-    int max = 20;
+    int min = 15;
+    int max = 15;
     int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
     public Animation() {
         Thread animationThread = new Thread(() -> {
@@ -31,7 +31,6 @@ public class Animation extends JComponent {
         int screenWidth = getWidth();
         int screenHeight = getHeight();
         int x = lastX + s;
-
 
         gg.setColor(Color.BLACK);
         gg.fillRect(x, screenHeight/2, w, h);
